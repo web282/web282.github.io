@@ -193,7 +193,7 @@
         <!-- Judul -->
         <h1 class="title">Selamat<br>Ulang Tahun!</h1>
 
-        <!-- Bingkai Foto (Gunakan nama file fotomu yang tepat di src) -->
+        <!-- Bingkai Foto -->
         <div class="photo-container">
             <img src="Ellen.jpeg" alt="Foto Ulang Tahun">
         </div>
@@ -208,6 +208,9 @@
             </div>
         </div>
 
+        <!-- Audio Player (Tersembunyi) -->
+        <audio id="laguUltah" src="happy_birthday.mp3"></audio>
+
         <!-- Bagian Bawah: Tombol Buka Hadiah -->
         <div class="bottom-section">
             <h3>Buka Kado Disini</h3>
@@ -219,14 +222,19 @@
         </div>
     </div>
 
-    <!-- Script JavaScript untuk Tombol -->
+    <!-- Script JavaScript untuk Tombol dan Lagu -->
     <script>
         function bukaKado() {
             var hadiah = document.getElementById("hadiah");
             var tombol = document.querySelector(".btn-hadiah");
+            var lagu = document.getElementById("laguUltah");
             
+            // Memunculkan pesan
             hadiah.style.display = "block";
             tombol.style.display = "none";
+
+            // Memutar lagu
+            lagu.play();
         }
     </script>
 
